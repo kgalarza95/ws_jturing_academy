@@ -470,7 +470,8 @@
               <span class="category">Docente</span>
               <h4>Kevin Galarza</h4>
               <ul class="social-icons">
-                <li><a href="https://www.facebook.com/kgalarza03?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+                <li><a href="https://www.facebook.com/kgalarza03?locale=es_LA" target="_blank"><i
+                      class="fab fa-facebook"></i></a>
                 </li>
                 <li><a href="https://github.com/kgalarza95" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/kevin-galarza-vera/" target="_blank" <i
@@ -487,9 +488,11 @@
               <span class="category">Asistente Académico</span>
               <h4>Anna Mora</h4>
               <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook" target="_blank"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter" target="_blank"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin" target="_blank"></i></a></li>
+                <li><a href="https://www.facebook.com/ale.okis.1?locale=es_LA"><i class="fab fa-facebook"
+                      target="_blank"></i></a></li>
+                <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FAnnabelenmo"><i class="fab fa-twitter" target="_blank"></i></a></li>
+                <li><a href="https://www.instagram.com/anabelenmorapinto?utm_source=qr&igsh=YmV6dzkyNDE4Mnc2 "><i class="fab fa-instagram" target="_blank"></i></a></li>
+
               </ul>
             </div>
           </div>
@@ -707,6 +710,8 @@
           </div>
 
         </div>
+
+
         <div class="col-lg-6">
           <div class="contact-us-content">
             <form id="contact-form" action="" method="post">
@@ -736,6 +741,10 @@
             </form>
           </div>
         </div>
+
+
+
+
       </div>
     </div>
   </div>
@@ -756,6 +765,30 @@
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        // Evitar el envío del formulario
+        event.preventDefault();
+
+        // Obtener los valores de los campos del formulario
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Aquí puedes hacer lo que quieras con los valores, como enviarlos a través de WhatsApp
+        console.log('Nombre:', name);
+        console.log('Correo:', email);
+        console.log('Mensaje:', message);
+
+        // Por ejemplo, para enviarlos a través de WhatsApp, podrías crear el enlace de WhatsApp y redirigir al usuario
+        var whatsappLink = 'https://wa.me/?text=Nombre:%20' + encodeURIComponent(name) + '%0A%0ACorreo:%20' + encodeURIComponent(email) + '%0A%0AMensaje:%20' + encodeURIComponent(message);
+        window.location.href = whatsappLink;
+      });
+    });
+  </script>
 
 </body>
 
